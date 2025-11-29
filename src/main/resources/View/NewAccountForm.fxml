@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.CheckBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="500.0" prefWidth="400.0" style="-fx-background-color: #ffff;" xmlns="http://javafx.com/javafx/24.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Control.NewAccountFormController">
+    <children>
+        <Pane prefHeight="51.0" prefWidth="400.0" style="-fx-background-color: #003049;">
+            <children>
+                <Label layoutX="174.0" layoutY="16.0" text="Sign Up" textFill="WHITE">
+                    <font>
+                        <Font name="System Bold" size="14.0" />
+                    </font>
+                </Label>
+            </children>
+        </Pane>
+        <TextField fx:id="txtEmail" layoutX="25.0" layoutY="106.0" prefHeight="30.0" prefWidth="350.0" />
+        <Label fx:id="lblEmail" layoutX="28.0" layoutY="79.0" text=" Email address">
+            <font>
+                <Font name="Arial Narrow" size="14.0" />
+            </font>
+        </Label>
+        <Label layoutX="31.0" layoutY="172.0" text="OTP verification">
+            <font>
+                <Font name="Arial Narrow" size="14.0" />
+            </font>
+        </Label>
+        <PasswordField fx:id="txtPassword" layoutX="24.0" layoutY="292.0" onKeyTyped="#strengthIndicatorAction" prefHeight="30.0" prefWidth="350.0" />
+        <Button fx:id="btnCreate" layoutX="24.0" layoutY="362.0" mnemonicParsing="false" onAction="#actionCreate" prefHeight="26.0" prefWidth="350.0" style="-fx-background-color: #0077b6;" text="Create Account" textFill="WHITE">
+            <font>
+                <Font name="System Bold" size="11.0" />
+            </font>
+        </Button>
+        <Label layoutX="96.0" layoutY="239.0" text="Didn't receive OTP?" />
+        <Label fx:id="lblLog" layoutX="213.0" layoutY="399.0" onMouseClicked="#clickedLog" text="Log in" textFill="#0077b6" />
+      <Button fx:id="btnGetOtp" layoutX="275.0" layoutY="147.0" mnemonicParsing="false" onAction="#actionGetOtp" prefHeight="26.0" prefWidth="100.0" style="-fx-background-color: #0077b6;" text="Get OTP" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="11.0" />
+         </font>
+      </Button>
+      <TextField fx:id="txtOtp1" layoutX="24.0" layoutY="199.0" prefHeight="30.0" prefWidth="30.0">
+         <font>
+            <Font name="System Italic" size="12.0" />
+         </font>
+      </TextField>
+      <Label layoutX="31.0" layoutY="265.0" text="Password">
+         <font>
+            <Font name="Arial Narrow" size="14.0" />
+         </font>
+      </Label>
+      <Label layoutX="108.0" layoutY="399.0" text="Already registered?" />
+      <Label fx:id="lblResend" layoutX="203.0" layoutY="239.0" onMouseClicked="#clickedResend" text="Resend OTP" textFill="#0077b6" />
+      <CheckBox fx:id="checkLogged" layoutX="24.0" layoutY="333.0" mnemonicParsing="false" text="Keep me logged in" />
+      <TextField fx:id="txtOtp2" layoutX="64.0" layoutY="199.0" prefHeight="30.0" prefWidth="30.0">
+         <font>
+            <Font name="System Italic" size="12.0" />
+         </font>
+      </TextField>
+      <TextField fx:id="txtOtp3" layoutX="104.0" layoutY="199.0" prefHeight="30.0" prefWidth="30.0">
+         <font>
+            <Font name="System Italic" size="12.0" />
+         </font>
+      </TextField>
+      <TextField fx:id="txtOtp4" layoutX="144.0" layoutY="199.0" onKeyReleased="#validateOtp" prefHeight="30.0" prefWidth="30.0">
+         <font>
+            <Font name="System Italic" size="12.0" />
+         </font>
+      </TextField>
+      <Label fx:id="lblVerified" layoutX="328.0" layoutY="80.0" textFill="#49dc39">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+      </Label>
+      <Label fx:id="lblStrength" layoutX="327.0" layoutY="271.0">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+      </Label>
+    </children>
+</AnchorPane>
